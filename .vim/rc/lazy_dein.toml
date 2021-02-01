@@ -1,0 +1,47 @@
+[[plugins]]
+repo = 'mtscout6/syntastic-local-eslint.vim'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'othree/yajs.vim'
+on_ft = ['javascript', 'markdown']
+
+[[plugins]]
+repo = 'othree/es.next.syntax.vim'
+on_ft = ['javascript', 'markdown']
+
+[[plugins]]
+repo = 'othree/javascript-libraries-syntax.vim'
+on_ft = ['javascript', 'markdown']
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'markdown']
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = ['javascript', 'markdown']
+
+[[plugins]]
+repo = 'heavenshell/vim-jsdoc'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'mtscout6/syntastic-local-eslint.vim'
+on_ft = ['javascript']
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = ['typescript']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = ['markdown']
+
+[[plugins]]
+repo = 'flowtype/vim-flow'
+on_ft = ['javascript', 'javascript.jsx']

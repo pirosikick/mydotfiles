@@ -1,0 +1,28 @@
+[core]
+	autocrlf = input
+	pager = less -r
+[user]
+	name = Hiroyuki Anai
+	email = pirosikick@gmail.com
+[credential]
+	helper = osxkeychain
+[merge]
+[alias]
+	ci = commit
+	cs = commit -s
+	co = checkout
+	b = checkout -b
+	br = branch
+	s = status
+	st  = status
+	d = diff
+	c = commit -v
+	o = checkout
+	p = pull
+	pu = push
+	puu = push -u
+	r = remote
+[github]
+	user = pirosikick
+[ghq]
+	root = ~/src
