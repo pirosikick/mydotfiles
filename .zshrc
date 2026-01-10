@@ -31,16 +31,14 @@ setopt no_global_rcs
 typeset -U path PATH
 
 path=(
+$HOME/Downloads/google-cloud-sdk/bin
 ./node_modules/.bin
-$HOME/.nodenv/bin
-$HOME/.rbenv/bin
-$HOME/.phpenv/bin
-$HOME/.exenv/bin
 $GOPATH/bin
 /Applications/MacVim.app/Contents/MacOS/
 /usr/local/php5/bin
 /usr/local/bin
 /usr/sbin
+${ASDF_DATA_DIR:-$HOME/.asdf}/shims
 $path
 )
 
@@ -53,6 +51,7 @@ path=(
 fpath=(
 $HOME/.zfunc
 $HOME/.zsh/completion
+$HOME/.zsh/pure
 $fpath
 )
 # alias
@@ -61,6 +60,7 @@ alias ll="ls -lahGF"
 alias bi="bundle install --path vendor/bundle"
 alias be="bundle exec"
 alias re="rbenv exec"
+alias vim='nvim'
 alias mvim="/Applications/MacVim.app/Contents/MacOS/mvim"
 alias gitvdiff='git difftool --tool=vimdiff --no-prompt'
 alias vimgo='vim -u ~/.vimrc.go'
@@ -79,6 +79,7 @@ alias -g G='| grep'
 alias -g L='| vim -R -'
 alias -g ID='`id -u`'
 alias -g HL='| pygments -f rtf "style=monokai,fontface=Ricty"'
+alias -g SD='; say -v Kyoko "処理が完了しました。確認してください。"'
 
 autoload -U promptinit && promptinit
 prompt pure
@@ -151,22 +152,6 @@ function macvim () {
   fi
 }
 
-if builtin command -v nodenv > /dev/null; then
-  eval "$(nodenv init -)"
-fi
-
-# if builtin command -v phpenv > /dev/null; then
-#     eval "$(phpenv init -)"
-# fi
-
-if builtin command -v rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
-
-if builtin command -v exenv > /dev/null; then
-  eval "$(exenv init -)"
-fi
-
 if builtin command -v direnv > /dev/null; then
     eval "$(direnv hook zsh)"
 fi
@@ -187,3 +172,13 @@ function light() {
 
 . ~/.zsh/peco.zsh
 . ~/.zsh/npm.zsh
+
+# Created by `pipx` on 2021-09-25 07:12:20
+export PATH="$PATH:/Users/pirosikick/.local/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pirosikick/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pirosikick/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/pirosikick/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pirosikick/google-cloud-sdk/completion.zsh.inc'; fi
+
